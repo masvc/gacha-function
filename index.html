@@ -21,14 +21,19 @@
       <section class="gacha-button">
         <button class="start-button">スタート</button>
       </section>
-
-      <section class="gacha-result">
-        <div class="gacha-result-item">結果：</div>
-      </section>
     </main>
 
     <footer>
       <p class="copyright">©️ 2024 Gacha Maker</p>
     </footer>
+
+    <script>
+      // jQueryを使ってスタートボタンがクリックされたときの処理
+      $(document).ready(function () {
+        $(".start-button").on("click", function () {
+          window.location.href = "result.html"; // result.htmlに遷移
+        });
+      });
+    </script>
   </body>
 </html>
