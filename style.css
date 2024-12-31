@@ -1,4 +1,9 @@
 /* gacha/style.css */
+body {
+  background-color: #f9f9f9; /* 背景色を変更 */
+  font-family: "Arial", sans-serif; /* フォントを変更 */
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -6,11 +11,22 @@ header {
   margin: 20px 0;
 }
 
-footer {
+.logo {
+  font-size: 2em; /* ロゴのフォントサイズを大きく */
+  color: #333; /* ロゴの色 */
+}
+
+.gacha-canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  background-color: #ff9900; /* ガチャの背景色 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 300px; /* 幅を広げる */
+  height: 300px; /* 高さを広げる */
+  position: relative;
 }
 
 .gacha-button {
@@ -18,12 +34,11 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  position: relative;
 }
 
-.gacha-button button {
-  background-color: #ffcc00; /* 明るい黄色 */
-  color: #fff; /* 白色のテキスト */
+.start-button {
+  background-color: #ffcc00; /* ボタンの色 */
+  color: #fff; /* テキストの色 */
   border: none;
   border-radius: 50px; /* 丸みを帯びたボタン */
   padding: 15px 30px; /* パディングを追加 */
@@ -32,19 +47,23 @@ footer {
   transition: background-color 0.3s, transform 0.2s; /* ホバー時のアニメーション */
 }
 
-.gacha-button button:hover {
+.start-button:hover {
   background-color: #ff9900; /* ホバー時の色 */
   transform: scale(1.05); /* 少し拡大 */
 }
 
-.gacha-button::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px; /* デコレーションの幅 */
-  height: 10px; /* デコレーションの高さ */
-  background-color: #ffcc00; /* デコレーションの色 */
-  border-radius: 5px; /* 丸みを帯びたデコレーション */
+.gacha-result {
+  text-align: center; /* 結果を中央揃え */
+}
+
+.gacha-result-item {
+  font-size: 1.2em; /* 結果のフォントサイズ */
+  color: #333; /* 結果の色 */
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
