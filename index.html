@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      .start-button {
+        background-color: #4caf50; /* ボタンの背景色 */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50%; /* 丸いボタン */
+        transition: transform 0.5s; /* アニメーションの設定 */
+      }
+      .rotate {
+        animation: rotate 0.5s forwards; /* 回転アニメーション */
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1 class="logo">Gacha Maker</h1>
+      <h1 class="logo" href="index.html">Gacha Maker</h1>
     </header>
 
     <main>
@@ -31,7 +58,10 @@
       // jQueryを使ってスタートボタンがクリックされたときの処理
       $(document).ready(function () {
         $(".start-button").on("click", function () {
-          window.location.href = "result.html"; // result.htmlに遷移
+          $(this).addClass("rotate"); // 回転クラスを追加
+          setTimeout(function () {
+            window.location.href = "result.html"; // 3秒後にresult.htmlに遷移
+          }, 3000); // 3000ミリ秒（3秒）
         });
       });
     </script>
