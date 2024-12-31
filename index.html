@@ -43,6 +43,21 @@
     <main>
       <section class="gacha-canvas">
         <!-- ここにガチャのイメージ画像やアニメーションを表示する。 -->
+        <img
+          id="gacha-image"
+          src="gachamachine.png"
+          alt=""
+          style="width: 300px; height: auto; display: block"
+        />
+        <video
+          id="gacha-animation"
+          src="gachaAnime.mov"
+          type="video/mp4"
+          style="width: 300px; height: auto; display: none"
+          autoplay
+          loop
+          controls
+        ></video>
       </section>
 
       <section class="gacha-button">
@@ -59,6 +74,8 @@
       $(document).ready(function () {
         $(".start-button").on("click", function () {
           $(this).addClass("rotate"); // 回転クラスを追加
+          $("#gacha-image").hide(); // 画像を非表示
+          $("#gacha-animation").show(); // アニメーションを表示
           setTimeout(function () {
             window.location.href = "result.html"; // 3秒後にresult.htmlに遷移
           }, 3000); // 3000ミリ秒（3秒）
