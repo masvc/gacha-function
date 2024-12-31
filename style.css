@@ -1,0 +1,50 @@
+/* gacha/style.css */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.gacha-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.gacha-button button {
+  background-color: #ffcc00; /* 明るい黄色 */
+  color: #fff; /* 白色のテキスト */
+  border: none;
+  border-radius: 50px; /* 丸みを帯びたボタン */
+  padding: 15px 30px; /* パディングを追加 */
+  font-size: 1.5em; /* フォントサイズを大きく */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* ホバー時のアニメーション */
+}
+
+.gacha-button button:hover {
+  background-color: #ff9900; /* ホバー時の色 */
+  transform: scale(1.05); /* 少し拡大 */
+}
+
+.gacha-button::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* デコレーションの幅 */
+  height: 10px; /* デコレーションの高さ */
+  background-color: #ffcc00; /* デコレーションの色 */
+  border-radius: 5px; /* 丸みを帯びたデコレーション */
+}
